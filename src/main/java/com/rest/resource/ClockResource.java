@@ -14,12 +14,12 @@ public class ClockResource {
 	@Autowired
 	ClockService clockService;
 
-	@GetMapping("/getPopulation/{time}")
-	public @ResponseBody Object getPopulation(@PathVariable String time) {
+	@GetMapping("/getTime/{time}")
+	public @ResponseBody Object getTime(@PathVariable String time) {
 		
 
-		Object cityPopulation = clockService.getTime(time);
+		Object timeInWords = clockService.getTime(time);
 		
-		return cityPopulation;
+		return timeInWords;
 	}
 }
